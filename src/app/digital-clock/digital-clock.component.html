@@ -1,0 +1,25 @@
+<div class="container m-5">
+  <p>digital-clock works!</p>
+
+  <div class="row">
+    <!-- <h2>Time is : {{hour}}:{{minute}}:{{second}} {{am_pm}}</h2>
+
+    {{ getClock }} -->
+    <div id="clock">{{ currentTime }}</div>
+  </div>
+
+  <form action="" [formGroup]="clock" (ngSubmit)="clockSubmit()">
+    <label for="">digital-clock</label>
+
+    <input
+      type="text"
+      name="clock"
+      id=""
+      placeholder="Click to get the time"
+      formControlName="clock"
+      readonly
+    />
+
+    <button type="submit" class="btn btn-primary">Fetch Time</button>
+  </form>
+</div>

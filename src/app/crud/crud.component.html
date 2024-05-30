@@ -1,0 +1,84 @@
+<h3 class="m-5">{{ title }}</h3>
+<div class="container m-5">
+  <div class="">
+    <form action="" [formGroup]="userForm" (ngSubmit)="formsubmit()">
+      <label for="">Name : </label>
+      <input
+        type="text"
+        name="name"
+        id=""
+        class="form-control"
+        placeholder="please enter a valid name"
+        formControlName="name"
+      />
+      <br />
+      <br />
+      <label for="">E-Mail : </label>
+
+      <input
+        type="email"
+        name="email"
+        class="form-control"
+        id=""
+        placeholder="please enter a valid email"
+        formControlName="email"
+      />
+      <br />
+      <br />
+      <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+  </div>
+
+  <hr />
+
+  <div>
+    <table *ngFor="let storedValue of storedFormValue">
+      <td>
+        id :
+        <tr>
+          {{
+            storedValue.id
+          }}
+        </tr>
+      </td>
+
+      <td>
+        Name :
+        <tr>
+          {{
+            storedValue.name
+          }}
+        </tr>
+      </td>
+      <td>
+        E-Mail
+        <tr>
+          {{
+            storedValue.email
+          }}
+        </tr>
+      </td>
+      <td>
+        <tr>
+          <button
+            type="button"
+            class="btn btn-primary"
+            (click)="edit(storedValue.id)"
+          >
+            Edit
+          </button>
+        </tr>
+        <tr>
+          <button type="button" class="btn btn-success" (click)="update()">
+            Update
+          </button>
+        </tr>
+        <tr>
+          <button type="button" class="btn btn-danger" (click)="delete()">
+            Delete
+          </button>
+        </tr>
+      </td>
+    </table>
+  </div>
+</div>

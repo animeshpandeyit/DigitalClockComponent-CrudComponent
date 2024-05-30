@@ -1,10 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
-export class AppComponent {
-  title = 'crud-29-05-2024';
-}
+export class AppComponent {}
